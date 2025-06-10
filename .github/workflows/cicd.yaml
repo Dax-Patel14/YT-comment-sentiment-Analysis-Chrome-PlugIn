@@ -109,7 +109,7 @@ jobs:
           nohup python flask_app/app.py &
 
       - name: Run Flask API test_size
-          run: |
+        run: |
             pytest scripts/test_flask_api.py
 
 
