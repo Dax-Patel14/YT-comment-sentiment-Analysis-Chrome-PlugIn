@@ -76,7 +76,7 @@ To help content creators and marketing teams extract insights from YouTube comme
 
 * Hosted on **AWS EC2**
 * Uses **Docker + Gunicorn**
-* Accessed at: `http://<your-ec2-ip>:5000`
+* Accessed at: `http://my-elb-357235934.us-east-1.elb.amazonaws.com`
 
 ### Chrome Extension
 
@@ -87,20 +87,53 @@ To help content creators and marketing teams extract insights from YouTube comme
 
 ## 📂 Directory Structure
 
-```
-├── .github/workflows/         # GitHub Actions CI/CD pipeline
-├── chrome-extension/          # Frontend code (HTML, JS, manifest)
-├── src/                       # ML pipeline scripts
-│   ├── data/                  # Ingestion & preprocessing
-│   └── model/                 # Model training, evaluation, registration
-├── models/                    # Trained models & vectorizer
-├── scripts/                   # Test scripts & MLflow promotion logic
-├── dvc.yaml                   # DVC pipeline definition
-├── params.yaml                # Hyperparameters for model pipeline
-├── requirements.txt           # Python dependencies
-├── Dockerfile                 # For backend container
-├── appspec.yml                # AWS CodeDeploy spec
-└── README.md                  # Project documentation
+Project OrganizationAdd commentMore actions
+------------
+
+    ├── LICENSE
+    ├── Makefile           <- Makefile with commands like `make data` or `make train`
+    ├── README.md          <- The top-level README for developers using this project.
+    ├── data
+    │   ├── external       <- Data from third party sources.
+    │   ├── interim        <- Intermediate data that has been transformed.
+    │   ├── processed      <- The final, canonical data sets for modeling.
+    │   └── raw            <- The original, immutable data dump.
+    │
+    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
+    │
+    ├── models             <- Trained and serialized models, model predictions, or model summaries
+    │
+    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
+    │                         the creator's initials, and a short `-` delimited description, e.g.
+    │                         `1.0-jqp-initial-data-exploration`.
+    │
+    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+    │
+    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+    │   └── figures        <- Generated graphics and figures to be used in reporting
+    │
+    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
+    │                         generated with `pip freeze > requirements.txt`
+    │
+    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
+    ├── src                <- Source code for use in this project.
+    │   ├── __init__.py    <- Makes src a Python module
+    │   │
+    │   ├── data           <- Scripts to download or generate data
+    │   │   └── make_dataset.py
+    │   │
+    │   ├── features       <- Scripts to turn raw data into features for modeling
+    │   │   └── build_features.py
+    │   │
+    │   ├── models         <- Scripts to train models and then use trained models to make
+    │   │   │                 predictions
+    │   │   ├── predict_model.py
+    │   │   └── train_model.py
+    │   │
+    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
+    │       └── visualize.py
+    │
+    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 ```
 
 ---
@@ -155,6 +188,7 @@ python app.py
 * Average sentiment score (normalized 0–10)
 * Comment volume & length
 * Sentiment trends by month
+* Sentiment Distribution (Positive, Negative, Neutral)
 
 ---
 
@@ -171,8 +205,8 @@ python app.py
 ## 📬 Contact
 
 **Author:** Dax Patel
-**Email:** [dax.example@gmail.com](mailto:dax.example@gmail.com)
-**LinkedIn:** [linkedin.com/in/daxpatel](https://linkedin.com/in/daxpatel)
+**Email:** [dakshpatel731@gmail.com](mailto:dakshpatel731@gmail.com)
+**LinkedIn:** [linkedin.com/in/daxpatel]((https://www.linkedin.com/in/dax-patel14/))
 
 ---
 
